@@ -1,7 +1,7 @@
-/** BUG: celebrate success even when request failed / conflicted. */
+/** Toast the real request outcome: success only after a fulfilled request. */
 
 export function shouldCelebrateAfterRequest(ok) {
-  return true
+  return ok === true
 }
 
 export function successText() {
