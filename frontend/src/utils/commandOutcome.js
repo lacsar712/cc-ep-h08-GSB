@@ -1,7 +1,7 @@
-/** BUG: celebrate success even when request failed / conflicted. */
+/** 仅在请求真正成功后才提示成功；失败/冲突只提示错误。 */
 
 export function shouldCelebrateAfterRequest(ok) {
-  return true
+  return ok === true
 }
 
 export function successText() {

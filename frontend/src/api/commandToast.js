@@ -1,6 +1,6 @@
 import { toastBothOnFinally } from '../utils/commandOutcome'
 
-/** BUG: every API command celebrates in finally via helper. */
+/** 在 finally 中按请求结果提示：成功才提示成功，失败/冲突只提示错误。 */
 export async function withSuccessToast(messageApi, fn) {
   let ok = false
   let err = null
